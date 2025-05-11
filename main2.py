@@ -1,14 +1,13 @@
 class Cat:
-    def __init__(self, name = "unknown", age = 0, feedneed = 0):
+    def __init__(self, name = "unknown", age = 0, feedneed = 200):
         self.name = name
         self.age = age
         self.feedneed = feedneed
         
-    def __bool__(self, timesad = 3, grmm = 100, isfeed = 0):
-        return self.isfeed >= 1
+
+        
     
 c1 = Cat("zhorik", 1, 200)
-print(bool(Cat))
 
 
 
@@ -19,11 +18,13 @@ class Student:
 
     Uni = "KBTU"
 
-    def __init__(self, name = "Unknown", group = "Unknown", sudid = 0, gpa = 1.0):
+    def __init__(self, name = "Unknown", group = "Unknown", sudid = 0, gpa = 1.0, zp = 200000, balance = 0):
         self.name = name
         self.group = group
         self.studentid = sudid
         self.gpa = gpa
+        self.zp = zp
+        self.balance = balance
     def __bool__(self):
         return self.gpa >= 2.0
 
@@ -39,6 +40,11 @@ class Student:
         print("ID:", self.studentid)
         print("Uni:", self.Uni)
 
-s1 = Student("DeltaBust", "1313", 12, 2.5)
+    def month(self, spendm = 120000):
+        self.balance += self.zp
+        print(self.balance - spendm)
+
+s1 = Student("DeltaBust", "1313", 12, 2.5, 150000, 200000)
 print(bool(s1))
 print(s1)
+s1.month(150000)

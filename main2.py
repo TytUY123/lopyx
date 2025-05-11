@@ -1,3 +1,20 @@
+class Cat:
+    def __init__(self, name = "unknown", age = 0, feedneed = 0):
+        self.name = name
+        self.age = age
+        self.feedneed = feedneed
+        
+    def __bool__(self, timesad = 3, grmm = 100, isfeed = 0):
+        return self.isfeed >= 1
+    
+c1 = Cat("zhorik", 1, 200)
+print(bool(Cat))
+
+
+
+
+
+
 class Student:
 
     Uni = "KBTU"
